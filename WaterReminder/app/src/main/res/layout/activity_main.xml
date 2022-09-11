@@ -20,7 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+<!--    <include layout="@layout/content_main" />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -30,5 +30,23 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="80dp"
+        android:text="WaterReminder"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_anchorGravity="end|top"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_button" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="218dp"
+        android:layout_height="79dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="88dp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
