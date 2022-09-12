@@ -21,12 +21,19 @@ public class HomeActivity extends AppCompatActivity {
     Button logout;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
+    Button more, less;
+
+    private int glasses = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         logout = findViewById(R.id.logout);
+
+        more = findViewById(R.id.more);
+        less = findViewById(R.id.less);
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -41,6 +48,28 @@ public class HomeActivity extends AppCompatActivity {
                 SignOut();
             }
         });
+
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                glasses++;
+                updateTextView(glasses);
+            }
+        });
+        less.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (glasses >0) {
+                    glasses--;
+                }
+                updateTextView(glasses);
+            }
+        });
+    }
+
+    public void updateTextView(int toThis) {
+        TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText(Integer.toString(toThis));
     }
 
     private void SignOut() {

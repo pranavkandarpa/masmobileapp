@@ -17,10 +17,23 @@
         android:textSize="30sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="150dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/welcome"
         android:padding="10dp"
         android:backgroundTint="@color/black"
         android:textColor="@color/white"
@@ -28,8 +41,35 @@
         android:layout_marginLeft="20sp"
         android:layout_marginRight="20sp"
         android:layout_marginTop="200dp"
+        android:text="more"
+        android:id="@+id/more" />
+
+    <Button
+        android:id="@+id/less"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="20sp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
+        android:text="less"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="336dp"
+        android:layout_marginRight="20sp"
+        android:backgroundTint="@color/black"
+        android:padding="10dp"
         android:text="Logout"
-        android:id="@+id/logout" />
+        android:textColor="@color/white"
+        android:textSize="22sp" />
 
 
 </RelativeLayout>
